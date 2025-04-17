@@ -61,6 +61,8 @@ The model is trained using **Gradient Descent** by updating parameters:
 Each image is originally shaped as (height, width, 3) (RGB). It is flattened into a column vector like this:
 <div align="center">
 
+(https://latex.codecogs.com/svg.image?x_{1}=\begin{bmatrix}x_{1R}\\|\\x_{1G}\\|\\x_{1B}\\|\\\end{bmatrix})
+
 </div>
 
 Then, all image vectors are stacked together to form a matrix X where each column represents one image:
