@@ -1,0 +1,116 @@
+# Logistic Regression from Scratch — Cat vs Non-Cat Classification
+
+This project is a **binary image classification model** implemented from scratch using **NumPy and h5py**. It trains a **logistic regression model** to distinguish between images of **cats** and **non-cats**, without using any machine learning libraries like Scikit-learn or TensorFlow.
+
+---
+
+## Dataset
+
+The model uses the `catvsnoncat.h5` dataset which contains:
+- `train_set_x`: Training images of shape (m_train, height, width, 3)
+- `train_set_y`: Training labels (0 = non-cat, 1 = cat)
+- `test_set_x`: Test images
+- `test_set_y`: Test labels
+
+Files used:
+- `train_catvsnoncat.h5`
+- `test_catvsnoncat.h5`
+
+---
+
+## Logistic Regression Overview
+
+Logistic Regression uses the **sigmoid function**:
+
+<div align="center">
+
+![sigmoid](https://latex.codecogs.com/svg.image?\Large&space;\sigma(z)&space;=&space;\frac{1}{1&plus;e^{-z}})
+
+</div>
+
+Where:
+
+\[
+z = w^T x + b
+\]
+
+The model is trained using **Gradient Descent** by updating parameters:
+
+<div align="center">
+
+![grad](https://latex.codecogs.com/svg.image?\Large&space;w:=w-\alpha\cdot\frac{1}{m}\cdot\sum_{i=1}^{m}(a^{(i)}-y^{(i)})x^{(i)})
+
+![grad-b](https://latex.codecogs.com/svg.image?\Large&space;b:=b-\alpha\cdot\frac{1}{m}\cdot\sum_{i=1}^{m}(a^{(i)}-y^{(i)}))
+
+</div>
+
+---
+
+## Features
+
+- Loads `.h5` image dataset
+- Preprocesses RGB images into column vectors
+- Implements forward & backward propagation manually
+- Optimizes using gradient descent
+- Predicts and evaluates accuracy
+- Entire pipeline written from scratch
+
+---
+
+## Data Preprocessing
+
+Each image is flattened from shape `(height, width, 3)` into a **column vector** like this:
+
+<div align="center">
+
+![reshape](https://latex.codecogs.com/svg.image?\Large&space;x^{(i)}&space;=&space;\begin{bmatrix}r\\g\\b\end{bmatrix})
+
+</div>
+
+Then stacked into a matrix `X` where each column is an image:
+
+\[
+X = \begin{bmatrix}
+| & | & | \\
+x^{(1)} & x^{(2)} & \cdots \\
+| & | & |
+\end{bmatrix}
+\]
+
+---
+
+## Model Architecture
+
+```plaintext
+Input Layer (flattened image vector)
+       ↓
+Linear Combination: z = wᵀx + b
+       ↓
+Activation: a = sigmoid(z)
+       ↓
+Loss: cross-entropy
+       ↓
+Backpropagation: compute gradients
+       ↓
+Gradient Descent: update weights and bias
+
+
+## Requirements
+-Python3
+-Numpy
+-h5py
+
+## How to run
+python logistic_regression_cat_classifier.py
+Make sure test_catvsnoncat.h5 and train_catvsnoncat.h5 are in the same folder
+
+##Sample Output
+model trained
+Total data: 50
+Correct prediction number: 36
+The accuracy of model is: 72.0%
+
+
+
+
+
