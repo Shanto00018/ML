@@ -62,6 +62,8 @@ Each image is originally shaped as (height, width, 3) (RGB). It is flattened int
 <div align="center">
 
 (https://latex.codecogs.com/svg.image?x_{1}=\begin{bmatrix}x_{1R}\\|\\x_{1G}\\|\\x_{1B}\\|\\\end{bmatrix})
+![image](https://github.com/user-attachments/assets/db51bb0c-fc1d-41c8-86c0-1e6e3955d04d)
+
 
 </div>
 
