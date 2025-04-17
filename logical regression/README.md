@@ -71,9 +71,9 @@ Then stacked into a matrix `X` where each column is an image:
 
 \[
 X = \begin{bmatrix}
-| & | & | \\
+. & . & . \\
 x^{(1)} & x^{(2)} & \cdots \\
-| & | & |
+. & . & .
 \end{bmatrix}
 \]
 
@@ -101,14 +101,19 @@ Gradient Descent: update weights and bias
 -h5py
 
 ## How to run
+Run the given command
+```Bash
 python logistic_regression_cat_classifier.py
+```
 Make sure test_catvsnoncat.h5 and train_catvsnoncat.h5 are in the same folder
 
 ##Sample Output
+```plaintext
 model trained
 Total data: 50
 Correct prediction number: 36
 The accuracy of model is: 72.0%
+```
 
 
 
