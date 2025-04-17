@@ -61,8 +61,8 @@ The model is trained using **Gradient Descent** by updating parameters:
 Each image is originally shaped as (height, width, 3) (RGB). It is flattened into a column vector like this:
 <div align="center">
 
-(https://latex.codecogs.com/svg.image?x_{1}=\begin{bmatrix}x_{1R}\\|\\x_{1G}\\|\\x_{1B}\\|\\\end{bmatrix})
-![image](https://github.com/user-attachments/assets/db51bb0c-fc1d-41c8-86c0-1e6e3955d04d)
+![x](https://latex.codecogs.com/svg.image?x_{1}=\begin{bmatrix}x_{1R}\\|\\x_{1G}\\|\\x_{1B}\\|\\\end{bmatrix})
+
 
 
 </div>
@@ -70,7 +70,7 @@ Each image is originally shaped as (height, width, 3) (RGB). It is flattened int
 Then, all image vectors are stacked together to form a matrix X where each column represents one image:
 <div align="center">
 
-(https://latex.codecogs.com/svg.image?&space;x=\begin{bmatrix}|&|&|...\\x_{1}&x_{2}&x_{3}...\\|&|&|...\\\end{bmatrix})
+![x](https://latex.codecogs.com/svg.image?&space;x=\begin{bmatrix}|&|&|...\\x_{1}&x_{2}&x_{3}...\\|&|&|...\\\end{bmatrix})
 </div>
 
 ---
