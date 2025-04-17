@@ -58,24 +58,16 @@ The model is trained using **Gradient Descent** by updating parameters:
 ---
 
 ## Data Preprocessing
-
-Each image is flattened from shape `(height, width, 3)` into a **column vector** like this:
-
+Each image is originally shaped as (height, width, 3) (RGB). It is flattened into a column vector like this:
 <div align="center">
-
-![reshape](https://latex.codecogs.com/svg.image?\Large&space;x^{(i)}&space;=&space;\begin{bmatrix}r\\g\\b\end{bmatrix})
 
 </div>
 
-Then stacked into a matrix `X` where each column is an image:
+Then, all image vectors are stacked together to form a matrix X where each column represents one image:
+<div align="center">
 
-\[
-X = \begin{bmatrix}
-. & . & . \\
-x^{(1)} & x^{(2)} & \cdots \\
-. & . & .
-\end{bmatrix}
-\]
+![X-matrix](https://latex.codecogs.com/svg.image?\Large&space;X&space;=&space;\begin{bmatrix} \vert & \vert & \vert \ x^{(1)} & x^{(2)} & \cdots \ \vert & \vert & \vert \end{bmatrix})
+</div>
 
 ---
 
@@ -103,7 +95,7 @@ Gradient Descent: update weights and bias
 ## How to run
 Run the given command
 ```Bash
-python logistic_regression_cat_classifier.py
+python logistic_regression.py
 ```
 Make sure test_catvsnoncat.h5 and train_catvsnoncat.h5 are in the same folder
 
