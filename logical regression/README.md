@@ -93,7 +93,7 @@ Loss: cross-entropy
 Backpropagation: compute gradients
        ↓
 Gradient Descent: update weights and bias
-
+```
 
 ## Requirements
 -Python3
